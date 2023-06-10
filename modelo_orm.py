@@ -1,8 +1,8 @@
 from peewee import *
 import os
 
-sqlite_db = SqliteDatabase(os.getcwd()+'/'+'obras_urbanas.db', pragmas={'journal_mode': 'wal'})
-
+# sqlite_db = SqliteDatabase(os.getcwd()+'/'+'obras_urbanas.db', pragmas={'journal_mode': 'wal'})
+sqlite_db =SqliteDatabase('obras_urbanas.db')
 try:
     sqlite_db.connect()
     #La base de datos se crea cuando intenta conectarse por primera vez y no la encuentra.
